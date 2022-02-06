@@ -1,0 +1,58 @@
+.song {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .song-cover {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .song-cover-img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .song-cover-hole {
+      position: absolute;
+      width: 10%;
+      height: 10%;
+      background: #ffffff;
+      border-radius: 50%;
+    }
+  }
+
+  .song-name {
+    margin: 2rem 1rem 1rem 1rem;
+  }
+
+  .song-artist{
+    font-size: 1rem;
+  }
+
+  .song-playing {
+    animation: song-playing-animation 10s linear 0s infinite normal none;
+  }
+
+  .song-paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes song-playing-animation {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .song {
+    .song-cover {
+      width: 35%;
+    }
+  }
+}
